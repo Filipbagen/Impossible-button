@@ -1,6 +1,5 @@
 const play = () => {
   const buttonElement = getElement('button')
-  console.log(buttonElement)
   buttonElement.addEventListener('mouseenter', function (event) {
     moveButton(buttonElement)
   })
@@ -12,7 +11,8 @@ const getElement = (myClass) => {
 }
 
 const win = () => {
-  document.querySelector('#bg2').classList.toggle('blinking')
+  document.querySelector('body').classList.add('blinking')
+  document.querySelector('.prompt').classList.add('win')
 }
 
 const getRand = () => {
